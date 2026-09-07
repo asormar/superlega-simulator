@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+# Una sola corrida por rama: si se pushea encima, se cancela la anterior.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint-and-test:
+    name: Lint + tests (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      # No cancelar Windows porque falle Ubuntu (o al reves): interesa ver
+      # ambos, que es justo donde aparecen las diferencias de paths.
+      fail-fast: false
+      matrix:
+        # El repo se desarrolla en Windows y su ruta local tiene espacios y
+        # parentesis, cosa que ya ha roto scripts antes; se prueba en los dos.
+        os: [ubuntu-latest, windows-latest]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          # pyproject declara requires-python = ">=3.10".
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: pyproject.toml
+
+      - name: Instalar dependencias
+        run: python -m pip install --upgrade pip && pip install -e ".[test]" ruff black
+
+      - name: Ruff
+        run: ruff check src/ tests/
+
+      - name: Black
+        run: black --check src/ tests/
+
+      - name: Tests
+        # Se excluyen los `slow`: necesitan models/*.joblib y
+        # player_stats_params.json, que estan gitignored y no existen en CI.
+        run: pytest -q -m "not slow"
+
+      - name: Sanity del pipeline de datos
+        # Comprueba que los CSV de DB/ se cargan y agregan sin romperse.
+        env:
+          PYTHONIOENCODING: utf-8
+        run: python -m src.data.data_pipeline

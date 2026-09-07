@@ -1,0 +1,66 @@
+{
+  "shortcut": false,
+  "verdict": "negative",
+  "churn_coef_global": 0.11109775589418709,
+  "churn_coef_std_err": 0.5068050777880165,
+  "z_stat": 0.2192120023324952,
+  "churn_coef_per_fold": [
+    0.13607168991886331,
+    0.0002362045038840216,
+    0.09600731392346568,
+    0.05687557637922468
+  ],
+  "logloss_per_fold": [
+    0.5542947540905874,
+    0.7781946231508936,
+    0.686608878665468,
+    0.552322826749519
+  ],
+  "logloss_elo_only_per_fold": [
+    0.5563284033288654,
+    0.7355293335134553,
+    0.6652190388670439,
+    0.5610200410707614
+  ],
+  "logloss_mean": 0.6428552706641171,
+  "logloss_elo_only_mean": 0.6295242041950315,
+  "improvement_mean": -0.013331066469085523,
+  "sigma_lofo": 0.020290146129402428,
+  "n_folds": 4,
+  "n_imputed_skipped": 755,
+  "sample_population": 567,
+  "elo_baseline_logloss": 0.5677037549379479,
+  "test_year": 2025,
+  "val_years": [
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "test_metrics": {
+    "n": 110,
+    "logloss": 0.49305908776910584,
+    "logloss_elo": 0.4814994013712171,
+    "auc": 0.8529411764705883,
+    "brier": 0.16204457356756916,
+    "acc": 0.7454545454545455,
+    "logloss_in_sample": 0.4657872254248358,
+    "evaluation_mode": "held_out"
+  },
+  "test_metrics_if_computed": {
+    "n": 110,
+    "logloss": 0.49305908776910584,
+    "logloss_elo": 0.4814994013712171,
+    "auc": 0.8529411764705883,
+    "brier": 0.16204457356756916,
+    "acc": 0.7454545454545455,
+    "logloss_in_sample": 0.4657872254248358,
+    "evaluation_mode": "held_out"
+  },
+  "failing_conditions": [
+    "cond2: improvement_mean=-0.013331 <= max(sigma=0.0203, noise_floor=0.005)",
+    "cond4: churn_coef=0.111098, |z|=0.2192 \u2014 need coef>0 AND |z|>1.0"
+  ],
+  "sensitivity_verdict": "negative",
+  "note": "B5 churn experiment: LogReg(C=0.5) on [logit(elo_win_prob_h), diff_roster_continuity] with recency weight (half-life=2). Imputed rows skipped for primary; sensitivity includes them."
+}

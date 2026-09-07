@@ -1,0 +1,46 @@
+{
+  "match": {
+    "champion": "ExtraTrees",
+    "cv": {
+      "modelo": "ExtraTrees",
+      "logloss_mean": 0.7233439514747076,
+      "logloss_std": 0.036668038511476445,
+      "auc_mean": 0.4839161347937493,
+      "auc_std": 0.10035192765404549,
+      "brier_mean": 0.26425612727156456,
+      "acc_mean": 0.4790169255211628,
+      "n_folds": 4
+    },
+    "test": {
+      "test_season": 2025,
+      "n_test": 214,
+      "logloss": 0.6938120533011733,
+      "auc": 0.5282521802325582,
+      "brier": 0.25076082499735597,
+      "acc": 0.514018691588785
+    },
+    "n_features": 87
+  },
+  "set": {
+    "champion": "ExtraTrees",
+    "cv": {
+      "modelo": "ExtraTrees",
+      "logloss_mean": 0.6677024285295993,
+      "logloss_std": 0.01033832279401854,
+      "auc_mean": 0.618201897163747,
+      "auc_std": 0.02743548292071558,
+      "brier_mean": 0.23752652292583287,
+      "acc_mean": 0.5899755878493507,
+      "n_folds": 4
+    },
+    "test": {
+      "test_season": 2025,
+      "n_test": 853,
+      "logloss": 0.6509256732079914,
+      "auc": 0.6526327569805832,
+      "brier": 0.22977251162173556,
+      "acc": 0.6060961313012896
+    },
+    "n_features": 21
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "n_seeds": 20,
+  "n_teams": 12,
+  "half": "full (ida y vuelta)",
+  "config": {
+    "set_blend_weight_elo": 1.0,
+    "clamp_margin_point": 0.1,
+    "use_set_calibration": true,
+    "set_predictor_source": "logreg_v2",
+    "point_model": true
+  },
+  "spearman_fuerza_posicion": -0.97203,
+  "spearman_pvalue": 1.2868115751495013e-07,
+  "mean_std_position": 1.2467,
+  "seconds": 26.3,
+  "standings": [
+    {
+      "equipo": "Perugia",
+      "posicion_media": 1.4,
+      "posicion_std": 0.66,
+      "puntos_medios": 58.3,
+      "fuerza_margin_elo": 0.833
+    },
+    {
+      "equipo": "Trento",
+      "posicion_media": 2.45,
+      "posicion_std": 1.12,
+      "puntos_medios": 52.0,
+      "fuerza_margin_elo": 0.734
+    },
+    {
+      "equipo": "Lube",
+      "posicion_media": 3.35,
+      "posicion_std": 1.15,
+      "puntos_medios": 48.0,
+      "fuerza_margin_elo": 0.616
+    },
+    {
+      "equipo": "Modena",
+      "posicion_media": 4.2,
+      "posicion_std": 2.06,
+      "puntos_medios": 42.9,
+      "fuerza_margin_elo": 0.639
+    },
+    {
+      "equipo": "Verona",
+      "posicion_media": 5.5,
+      "posicion_std": 1.12,
+      "puntos_medios": 37.5,
+      "fuerza_margin_elo": 0.672
+    },
+    {
+      "equipo": "Piacenza",
+      "posicion_media": 5.95,
+      "posicion_std": 1.75,
+      "puntos_medios": 35.5,
+      "fuerza_margin_elo": 0.58
+    },
+    {
+      "equipo": "Taranto",
+      "posicion_media": 6.25,
+      "posicion_std": 1.84,
+      "puntos_medios": 33.1,
+      "fuerza_margin_elo": 0.526
+    },
+    {
+      "equipo": "Milano",
+      "posicion_media": 7.8,
+      "posicion_std": 1.4,
+      "puntos_medios": 27.4,
+      "fuerza_margin_elo": 0.474
+    },
+    {
+      "equipo": "Monza",
+      "posicion_media": 8.95,
+      "posicion_std": 1.32,
+      "puntos_medios": 22.4,
+      "fuerza_margin_elo": 0.374
+    },
+    {
+      "equipo": "Padova",
+      "posicion_media": 9.85,
+      "posicion_std": 1.11,
+      "puntos_medios": 17.6,
+      "fuerza_margin_elo": 0.331
+    },
+    {
+      "equipo": "Cisterna",
+      "posicion_media": 10.5,
+      "posicion_std": 0.92,
+      "puntos_medios": 15.3,
+      "fuerza_margin_elo": 0.275
+    },
+    {
+      "equipo": "Grottazzolina",
+      "posicion_media": 11.8,
+      "posicion_std": 0.51,
+      "puntos_medios": 6.0,
+      "fuerza_margin_elo": 0.183
+    }
+  ]
+}

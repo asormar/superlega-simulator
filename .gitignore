@@ -1,0 +1,49 @@
+# ─── Python ───────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+*.egg
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# Configuración local
+.env
+.env.local
+.env.*.local
+
+# ─── Modelos ───────────────────────────────────────────────────────────
+# Los artefactos entrenados (models/*.joblib y player_stats_params.json) SÍ
+# se versionan: pesan ~2,5 MB en total y permiten que un clon arranque sin
+# reentrenar. Lo que se ignora son los subproductos regenerables.
+models/feature_cache/
+models/benchmark_results/
+models/plots/
+
+# ─── Frontend ─────────────────────────────────────────────────────────
+src/web/node_modules/
+src/web/dist/
+
+# ─── IDE ──────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+
+# ─── Logs y salidas de entrenamiento ──────────────────────────────────
+*.log
+*.log.err
+train_output.log
+train_output.log.err
+
+# ─── Sistema operativo ────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/

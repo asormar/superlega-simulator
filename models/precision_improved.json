@@ -1,0 +1,56 @@
+{
+  "match": {
+    "champion": "margin_elo",
+    "cv": {
+      "n_folds": 0,
+      "note": "Elo es determinista (sin entrenamiento), no requiere CV."
+    },
+    "test": {
+      "test_season": 2025,
+      "n_test": 314,
+      "logloss": 0.5677037549379479,
+      "auc": 0.7623804644808743,
+      "brier": 0.19300365907064349,
+      "acc": 0.7038216560509554
+    },
+    "n_features": 1
+  },
+  "set": {
+    "champion": "LogisticRegression",
+    "cv": {
+      "n_folds": 2,
+      "logloss_mean": 0.6338277174254023,
+      "logloss_std": 0.01174068889074864,
+      "auc_mean": 0.6790681103656286,
+      "auc_std": 0.01691845409910303,
+      "brier_mean": 0.22177070894847045,
+      "brier_std": 0.005210051992758202,
+      "acc_mean": 0.6435783348603287,
+      "acc_std": 0.005206241837072856
+    },
+    "test": {
+      "test_season": 2025,
+      "n_test": 1193,
+      "logloss": 0.6218377516645133,
+      "auc": 0.6970344213820228,
+      "brier": 0.21642889977204055,
+      "acc": 0.6504610226320201
+    },
+    "n_features": 21
+  },
+  "config": {
+    "match_features": [
+      "elo_diff",
+      "diff_form_ewma",
+      "h2h_win_rate_h",
+      "diff_set_ratio",
+      "diff_point_ratio"
+    ],
+    "train_seasons": [
+      2022,
+      2023,
+      2024
+    ],
+    "test_season": 2025
+  }
+}

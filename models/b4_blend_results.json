@@ -1,0 +1,47 @@
+{
+  "shortcut": false,
+  "verdict": "negative",
+  "w_global": 0.6688368047183267,
+  "w_per_fold_lofo": [
+    0.6847890726219401,
+    0.5588250565023976,
+    0.5182259266224447,
+    0.9135071631265247
+  ],
+  "logloss_per_fold": [
+    0.5738350050063398,
+    0.6342702834911991,
+    0.6664948846973745,
+    0.5746731329949932
+  ],
+  "logloss_elo_only_per_fold": [
+    0.577083241232133,
+    0.6313334059413264,
+    0.6629189858743079,
+    0.5765215599702043
+  ],
+  "logloss_mean": 0.6123183265474768,
+  "logloss_elo_only_mean": 0.6119642982544928,
+  "improvement_mean": -0.00035402829298378236,
+  "sigma_lofo": 0.005,
+  "n_folds": 4,
+  "test_year": 2025,
+  "val_years": [
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "test_metrics_if_computed": {
+    "n": 314,
+    "logloss": 0.5650358255281552,
+    "auc": 0.7605020491803278,
+    "brier": 0.19221033598154513,
+    "acc": 0.6878980891719745
+  },
+  "failing_conditions": [
+    "per_fold_wins=2/4 < required=3",
+    "improvement_mean=-0.000354 <= max(sigma=0.0050, noise_floor=0.005)"
+  ],
+  "note": "B4 blend experiment: P_final = w * P_elo + (1-w) * P_derived where P_derived = p_match_from_p_set(SetPredictor.predict_proba)"
+}

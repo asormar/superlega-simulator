@@ -1,0 +1,61 @@
+{
+  "parameter": "CLAMP_MARGIN_POINT",
+  "grid": [
+    0.05,
+    0.08,
+    0.1
+  ],
+  "results": {
+    "0.05": {
+      "pair_level": {
+        "mean_abs_diff": 0.1507,
+        "p95_abs_diff": 0.25092,
+        "n_pairs": 132
+      },
+      "season_level": {
+        "spearman": -0.8951,
+        "spearman_pvalue": 8.4e-05,
+        "mean_std_position": 0.32096,
+        "mean_std_total_points": 0.93113,
+        "n_seeds": 10
+      },
+      "time_seconds": 129.5
+    },
+    "0.08": {
+      "pair_level": {
+        "mean_abs_diff": 0.20364,
+        "p95_abs_diff": 0.34404,
+        "n_pairs": 132
+      },
+      "season_level": {
+        "spearman": -0.95804,
+        "spearman_pvalue": 1e-06,
+        "mean_std_position": 0.30046,
+        "mean_std_total_points": 0.82593,
+        "n_seeds": 10
+      },
+      "time_seconds": 134.5
+    },
+    "0.1": {
+      "pair_level": {
+        "mean_abs_diff": 0.21637,
+        "p95_abs_diff": 0.37949,
+        "n_pairs": 132
+      },
+      "season_level": {
+        "spearman": -0.96503,
+        "spearman_pvalue": 0.0,
+        "mean_std_position": 0.20971,
+        "mean_std_total_points": 0.73704,
+        "n_seeds": 10
+      },
+      "time_seconds": 130.4
+    }
+  },
+  "best": "0.1",
+  "params": {
+    "n_sims": 100,
+    "n_seeds": 10
+  },
+  "criterion": "spearman mas negativo (mejor ranking); desempate por |P_MC - p_elo|"
+}

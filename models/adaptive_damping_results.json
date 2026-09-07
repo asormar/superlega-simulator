@@ -1,0 +1,32 @@
+{
+  "n_mc": 100,
+  "damping_fixed": 0.5,
+  "damping_adaptive_start": 0.3,
+  "damping_adaptive_end": 0.7,
+  "damping_adaptive_total_jornadas": 26,
+  "reference_3_0_30": {
+    "3-0%": 40.0,
+    "3-1%": 30.0,
+    "3-2%": 30.0
+  },
+  "fixed": {
+    "3-0%": 34.89,
+    "3-1%": 36.43,
+    "3-2%": 28.67,
+    "n": 13200
+  },
+  "adaptive": {
+    "3-0%": 34.89,
+    "3-1%": 36.43,
+    "3-2%": 28.67,
+    "n": 13200
+  },
+  "delta_3_0_pct": 0.0,
+  "delta_3_1_pct": 0.0,
+  "delta_3_2_pct": 0.0,
+  "fixed_l1_to_reference": 12.869999999999997,
+  "adaptive_l1_to_reference": 12.869999999999997,
+  "closer_to_reference": "tie",
+  "verdict": "marginal",
+  "recommendation": "keep-fixed"
+}

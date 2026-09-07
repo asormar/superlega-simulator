@@ -1,0 +1,28 @@
+{
+  "set_extratrees": {
+    "default_auc": 0.6274725274725275,
+    "optuna_auc": 0.6471234647705236,
+    "delta": 0.019650937297996163,
+    "best_params": {
+      "n_estimators": 135,
+      "max_depth": 7,
+      "min_samples_leaf": 1,
+      "min_samples_split": 8,
+      "max_features": null
+    }
+  },
+  "match_xgboost": {
+    "default_auc": 0.47530864197530864,
+    "optuna_auc": 0.5574074074074074,
+    "delta": 0.08209876543209871,
+    "best_params": {
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.13721505616406968,
+      "subsample": 0.9860930071516778,
+      "colsample_bytree": 0.7060253839673185,
+      "reg_alpha": 0.7401557916294317,
+      "reg_lambda": 1.4754402432310645
+    }
+  }
+}

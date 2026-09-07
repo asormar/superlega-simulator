@@ -1,0 +1,77 @@
+{
+  "parameter": "SET_BLEND_WEIGHT_ELO",
+  "grid": [
+    0.5,
+    0.7,
+    0.9,
+    1.0
+  ],
+  "results": {
+    "0.5": {
+      "pair_level": {
+        "mean_abs_diff": 0.225,
+        "p95_abs_diff": 0.40975,
+        "n_pairs": 132
+      },
+      "season_level": {
+        "spearman": -0.97203,
+        "spearman_pvalue": 0.0,
+        "mean_std_position": 0.21667,
+        "mean_std_total_points": 0.62846,
+        "n_seeds": 10
+      },
+      "time_seconds": 117.8
+    },
+    "0.7": {
+      "pair_level": {
+        "mean_abs_diff": 0.22493,
+        "p95_abs_diff": 0.41771,
+        "n_pairs": 132
+      },
+      "season_level": {
+        "spearman": -0.97023,
+        "spearman_pvalue": 0.0,
+        "mean_std_position": 0.15,
+        "mean_std_total_points": 0.54585,
+        "n_seeds": 10
+      },
+      "time_seconds": 120.3
+    },
+    "0.9": {
+      "pair_level": {
+        "mean_abs_diff": 0.2247,
+        "p95_abs_diff": 0.40975,
+        "n_pairs": 132
+      },
+      "season_level": {
+        "spearman": -0.97203,
+        "spearman_pvalue": 0.0,
+        "mean_std_position": 0.06667,
+        "mean_std_total_points": 0.40061,
+        "n_seeds": 10
+      },
+      "time_seconds": 120.2
+    },
+    "1.0": {
+      "pair_level": {
+        "mean_abs_diff": 0.2247,
+        "p95_abs_diff": 0.40975,
+        "n_pairs": 132
+      },
+      "season_level": {
+        "spearman": -0.97203,
+        "spearman_pvalue": 0.0,
+        "mean_std_position": 0.06667,
+        "mean_std_total_points": 0.40061,
+        "n_seeds": 10
+      },
+      "time_seconds": 119.1
+    }
+  },
+  "best": "0.9",
+  "params": {
+    "n_sims": 100,
+    "n_seeds": 10
+  },
+  "criterion": "spearman mas negativo (mejor ranking); desempate por |P_MC - p_elo|"
+}
