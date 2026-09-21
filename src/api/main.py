@@ -20,6 +20,7 @@ sys.path.insert(0, str(BASE_DIR))
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
+from starlette.exceptions import HTTPException as StarletteHTTPException
 from pydantic import BaseModel, Field, field_validator, model_validator
 from typing import Optional
 import pandas as pd
@@ -926,9 +927,25 @@ async def modelo_info():
 
 
 # ─── Servir frontend estático (si existe) ───
+class SPAStaticFiles(StaticFiles):
+    """StaticFiles con fallback a index.html para las rutas del router del cliente.
+
+    Sin esto, abrir o recargar /simular-partido devuelve 404: no existe ese
+    fichero en dist/. Las rutas /api/* conservan su 404 real.
+    """
+
+    async def get_response(self, path, scope):
+        try:
+            return await super().get_response(path, scope)
+        except StarletteHTTPException as exc:
+            if exc.status_code != 404 or path.startswith("api/"):
+                raise
+            return await super().get_response("index.html", scope)
+
+
 FRONTEND_DIR = BASE_DIR / "src" / "web" / "dist"
 if FRONTEND_DIR.exists():
-    app.mount("/", StaticFiles(directory=str(FRONTEND_DIR), html=True), name="frontend")
+    app.mount("/", SPAStaticFiles(directory=str(FRONTEND_DIR), html=True), name="frontend")
 
 
 if __name__ == "__main__":
