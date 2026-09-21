@@ -1,0 +1,9 @@
+# Render Blueprint: single Docker web service (API + built frontend).
+services:
+  - type: web
+    name: superlega-predictor
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/equipos
+    autoDeploy: true

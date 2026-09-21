@@ -1,0 +1,14 @@
+# Pinned runtime dependencies for the deployed demo.
+# Versions match the environment the .joblib artifacts were trained with:
+# unpickling scikit-learn / xgboost models across versions is not guaranteed.
+fastapi==0.115.12
+starlette==0.46.2
+uvicorn==0.34.2
+pydantic==2.11.7
+scikit-learn==1.6.1
+xgboost==3.2.0
+lightgbm==4.6.0
+pandas==2.2.3
+numpy==1.26.4
+scipy==1.15.1
+joblib==1.4.2
