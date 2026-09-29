@@ -38,7 +38,8 @@ jobs:
           cache-dependency-path: pyproject.toml
 
       - name: Instalar dependencias
-        run: python -m pip install --upgrade pip && pip install -e ".[test]" ruff black
+        # Versiones fijas: una release nueva del linter no debe romper el CI.
+        run: python -m pip install --upgrade pip && pip install -e ".[test]" ruff==0.16.9 black==26.5.1
 
       - name: Ruff
         run: ruff check src/ tests/

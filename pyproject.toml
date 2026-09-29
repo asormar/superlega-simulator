@@ -35,6 +35,9 @@ target-version = "py310"
 exclude = ["src/web", "memoria", "docs"]
 
 [tool.ruff.lint]
+# Conjunto de reglas explicito: Ruff 0.16 amplio su seleccion por defecto y
+# el CI empezo a fallar sin que el codigo cambiara.
+select = ["E4", "E7", "E9", "F"]
 # E402 (import no al principio del fichero): 104 avisos, TODOS falsos
 # positivos contra una convencion deliberada del repo. Los modulos bajo src/
 # llevan el boilerplate
