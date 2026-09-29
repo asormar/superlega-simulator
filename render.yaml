@@ -6,4 +6,5 @@ services:
     plan: free
     dockerfilePath: ./Dockerfile
     healthCheckPath: /api/equipos
-    autoDeploy: true
+    # Redeploy on every push to main, but only once the CI workflow passes.
+    autoDeployTrigger: checksPass
